@@ -1,0 +1,366 @@
+
+/* VARIÁVEIS DE CORES */
+:root {
+    --fundo: #fff4e5;
+    --escuro: #402719;
+    --texto: #38251b;
+    --dourado: #d69b52;
+    --vermelho: #a65e35;
+    --vermelho-escuro: #784023;
+    --borda: #dfc3a1;
+    --branco: #ffffff;
+}
+
+/* CONFIGURAÇÕES GERAIS */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: min(90%, 1120px);
+    margin: 0 auto;
+}
+
+/* CABEÇALHO */
+.cabecalho {
+    background: var(--escuro);
+    color: var(--branco);
+}
+
+.cabecalho-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+/* LOGO HOLY CHIP */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 180px;
+    height: 75px;
+    object-fit: contain;
+    object-position: center;
+    border: none;
+    border-radius: 0;
+}
+
+/* MENU DE NAVEGAÇÃO */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav a {
+    color: var(--branco);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--dourado);
+}
+
+/* BANNER PRINCIPAL */
+.hero {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--escuro), #24150e);
+    color: var(--branco);
+}
+
+.hero-conteudo {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+}
+
+.destaque {
+    margin: 0 0 0.5rem;
+    color: var(--dourado);
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+    line-height: 1.15;
+}
+
+h1 {
+    max-width: 12ch;
+    margin-bottom: 1rem;
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.hero-texto {
+    max-width: 50ch;
+    margin-bottom: 1.5rem;
+    color: #f5dfc5;
+    font-size: 1.1rem;
+}
+
+.hero-ilustracao {
+    display: grid;
+    min-height: 260px;
+    place-items: center;
+    border: 2px solid var(--dourado);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    font-size: 9rem;
+}
+
+/* BOTÕES */
+.botao,
+.card a {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    border-radius: 999px;
+    background: var(--vermelho);
+    color: var(--branco);
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.botao:hover,
+.card a:hover {
+    background: var(--vermelho-escuro);
+    transform: translateY(-3px);
+}
+
+/* CARDÁPIO DE COOKIES */
+.cardapio {
+    padding: 4rem 0;
+}
+
+.titulo-secao {
+    max-width: 650px;
+    margin-bottom: 2rem;
+}
+
+.titulo-secao p:last-child {
+    color: #80624e;
+}
+
+.grade-produtos {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border: 1px solid var(--borda);
+    border-radius: 20px;
+    background: var(--branco);
+    box-shadow: 0 15px 35px rgba(70, 40, 20, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(70, 40, 20, 0.16);
+}
+
+.card-destaque {
+    border: 3px solid var(--dourado);
+}
+
+.selo {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+    background: var(--vermelho);
+    color: var(--branco);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.card-icone {
+    margin-bottom: 1rem;
+    font-size: 4rem;
+}
+
+.card p {
+    color: #80624e;
+}
+
+.card-rodape {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: auto;
+    padding-top: 1rem;
+}
+
+.card-rodape strong {
+    color: var(--vermelho);
+    font-size: 1.2rem;
+}
+
+.card a {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* COMO PEDIR */
+.pedido {
+    padding: 4rem 0;
+    background: #f1dfc8;
+}
+
+.pedido-conteudo {
+    display: grid;
+    gap: 2rem;
+}
+
+.pedido ol {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pedido li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    background: var(--branco);
+}
+
+.pedido li span {
+    display: grid;
+    flex-shrink: 0;
+    width: 35px;
+    height: 35px;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--dourado);
+    font-weight: bold;
+}
+
+/* RODAPÉ */
+footer {
+    padding: 2rem 0;
+    background: #24150e;
+    color: #f5dfc5;
+}
+
+.rodape-conteudo {
+    display: grid;
+    gap: 1rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
+
+footer strong {
+    font-size: 1.3rem;
+    color: var(--dourado);
+}
+
+/* RESPONSIVIDADE */
+@media (min-width: 700px) {
+
+    .cabecalho-conteudo {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .rodape-conteudo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hero-conteudo,
+    .pedido-conteudo {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grade-produtos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    nav {
+        justify-content: flex-end;
+    }
+
+}
+
+/* AJUSTES PARA CELULARES */
+@media (max-width: 480px) {
+
+    .logo img {
+        width: 155px;
+        height: 65px;
+    }
+
+    nav {
+        gap: 0.75rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding: 3rem 0;
+    }
+
+    .hero-ilustracao {
+        min-height: 200px;
+        font-size: 7rem;
+    }
+
+    .cardapio,
+    .pedido {
+        padding: 3rem 0;
+    }
+
+}
